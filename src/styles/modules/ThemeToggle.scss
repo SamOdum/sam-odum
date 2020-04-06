@@ -1,9 +1,26 @@
-// .wrapper {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
+/*
+To make button truly responsive, first establish height and width
+for the wrapper div. Then code all the numerical pixel values in
+percentages given by the formula;
+
+    (target size/context size)*100
+
+I add comments besides the lines demonstrating this technique.
+*/
+
+$toggleHeight: 25px; /*Added this for size control*/
+$toggleWidth: 50px; /*Added this for size control*/
+
+.wrapper {
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // height: 20%;
+  margin: 25% auto;
+  height: $toggleHeight;
+  width: $toggleWidth;
+  // transform: translate(-50%, -50%);
+}
 
 #hide-checkbox {
   opacity: 0;
@@ -15,10 +32,11 @@
   position: relative;
   cursor: pointer;
   display: inline-block;
-  width: 200px;
-  height: 100px;
+  width: 100%; /* 200px */
+  height: 100%; /* 100px */
   background: #211042;
   border-radius: 50px;
+  border: 2px solid #fff;
   transition: 500ms;
   overflow: hidden;
 }
@@ -26,12 +44,12 @@
 .toggle-button {
   position: absolute;
   display: inline-block;
-  top: 7px;
-  left: 6px;
-  width: 86px;
-  height: 86px;
+  top: 7%; /* (7px/$toggleHeight)x100 */
+  left: 3%; /* (6px/$toggleWidth)x100 */
+  width: 43%; /* (86px/$toggleWidth)x100 */
+  height: 86%; /* (86px/$toggleHeight)x100 */
   border-radius: 50%;
-  background: #FAEAF1;
+  background: #faeaf1;
   overflow: hidden;
   box-shadow: 0 0 35px 4px rgb(255, 255, 255);
   transition: all 500ms ease-out;
@@ -40,110 +58,112 @@
 .crater {
   position: absolute;
   display: inline-block;
-  background: #FAEAF1;
+  background: #faeaf1;
   border-radius: 50%;
   transition: 500ms;
 }
 
 .crater-1 {
-  background: #FFFFF9;
-  width: 86px;
-  height: 86px;
-  left: 10px;
-  bottom: 10px;
+  background: #fffff9;
+  width: 100%; /* (86px/86px)x100 */
+  height: 100%; /* (86px/86px)x100 */
+  left: 11.62790697674419%; /* (10px/86px)x100 */
+  bottom: 11.62790697674419%; /* (10px/86px)x100 */
 }
 
 .crater-2 {
-  width: 20px;
-  height: 20px;
-  top: -7px;
-  left: 44px;
+  width: 23.25581395348837%; /* (20px/86px)x100 */
+  height: 23.25581395348837%; /* (20px/86px)x100 */
+  top: -8.13953488372093%; /* (-7px/86px)x100 */
+  left: 51.16279069767442%; /* (44px/86px)x100 */
 }
 
 .crater-3 {
-  width: 16px;
-  height: 16px;
-  top: 20px;
-  right: -4px;
+  width: 18.6046511627907%; /* (16px/86px)x100 */
+  height: 18.6046511627907%; /* (16px/86px)x100 */
+  top: 23.25581395348837%; /* (20px/86px)x100 */
+  right: -4.651162790697674%; /* (-4px/86px)x100 */
 }
 
 .crater-4 {
-  width: 10px;
-  height: 10px;
-  top: 24px;
-  left: 30px;
+  width: 11.62790697674419%; /* (10px/86px)x100 */
+  height: 11.62790697674419%; /* (10px/86px)x100 */
+  top: 27.90697674418605%; /* (24px/86px)x100 */
+  left: 34.88372093023256%; /* (30px/86px)x100 */
 }
 
 .crater-5 {
-  width: 15px;
-  height: 15px;
-  top: 40px;
-  left: 48px;
+  width: 17.44186046511628%; /* (15px/86px)x100 */
+  height: 17.44186046511628%; /* (15px/86px)x100 */
+  top: 46.51162790697674%; /* (40px/86px)x100 */
+  left: 55.81395348837209%; /* (48px/86px)x100 */
 }
 
 .crater-6 {
-  width: 10px;
-  height: 10px;
-  top: 48px;
-  left: 20px;
+  width: 11.62790697674419%; /* (10px/86px)x100 */
+  height: 11.62790697674419%; /* (10px/86px)x100 */
+  top: 55.81395348837209%; /* (48px/86px)x100 */
+  left: 23.25581395348837%; /* (20px/86px)x100 */
 }
 
 .crater-7 {
-  width: 12px;
-  height: 12px;
-  bottom: 5px;
-  left: 35px;
+  width: 13.95348837209302%; /* (12px/86px)x100 */
+  height: 13.95348837209302%; /* (12px/86px)x100 */
+  bottom: 5.813953488372093%; /* (5px/86px)x100 */
+  left: 40.69767441860465%; /* (35px/86px)x100 */
 }
 
 .star {
   position: absolute;
   display: inline-block;
   border-radius: 50%;
-  background: #FFF;
+  background: #fff;
   box-shadow: 1px 0 2px 2px rgb(255, 255, 255);
 }
 
 .star-1 {
-  width: 6px;
-  height: 6px;
-  right: 90px;
-  bottom: 40px;
+  width: 3%; /* (6px/$toggleWidth*100) */
+  height: 6%; /* (6px/$toggleHeight*100) */
+  right: 45%; /* (90px/$toggleWidth*100) */
+  bottom: 40%; /* (40px/$toggleHeight*100) */
 }
 
 .star-2 {
-  width: 8px;
-  height: 8px;
-  right: 70px;
-  top: 10px;
+  width: 4%; /* (8px/$toggleWidth*100) */
+  height: 8%; /* (8px/$toggleHeight*100) */
+  right: 35%; /* (8px/$toggleWidth*100) */
+  top: 10%; /* (10px/$toggleHeight*100) */
 }
 
 .star-3 {
-  width: 5px;
-  height: 5px;
-  right: 60px;
-  bottom: 15px;
+  width: 2.5%; /* (5px/$toggleWidth*100) */
+  height: 5%; /* (5px/$toggleHeight*100) */
+  right: 30%; /* (60px/$toggleWidth*100) */
+  bottom: 15%; /* (15px/$toggleHeight*100) */
 }
 
 .star-4 {
-  width: 3px;
-  height: 3px;
-  right: 40px;
-  bottom: 50px;
+  width: 1.5%; /* (3px/$toggleWidth*100) */
+  height: 3%; /* (3px/$toggleHeight*100) */
+  right: 20%; /* (40px/$toggleWidth*100) */
+  bottom: 50%; /* (50px/$toggleHeight*100) */
 }
 
 .star-5 {
-  width: 4px;
-  height: 4px;
-  right: 10px;
-  bottom: 35px;
+  width: 2%; /* (4px/$toggleWidth*100) */
+  height: 4%; /* (4px/$toggleHeight*100) */
+  right: 5%; /* (10px/$toggleWidth*100) */
+  bottom: 35%; /* (35px/$toggleHeight*100) */
 }
 
-.star-6, .star-7, .star-8 {
-  width: 10px;
-  height: 2px;
+.star-6,
+.star-7,
+.star-8 {
+  width: 5%; /* (10px/$toggleWidth*100) */
+  height: 2%; /* (2px/$toggleHeight*100) */
   border-radius: 2px;
   transform: rotate(-45deg);
-  box-shadow: 5px 0px 4px 1px #FFF;
+  box-shadow: 5px 0px 4px 1px #fff;
   animation-name: travel;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
@@ -151,19 +171,19 @@
 }
 
 .star-6 {
-  right: 30px;
-  bottom: 30px;
+  right: 15%; /* (30px/$toggleWidth*100) */
+  bottom: 30px; /* (30px/$toggleHeight*100) */
   animation-delay: -2s;
 }
 
 .star-7 {
-  right: 50px;
-  bottom: 60px;
+  right: 25%; /* (50px/$toggleWidth*100) */
+  bottom: 60%; /* (60px/$toggleHeight*100) */
 }
 
 .star-8 {
-  right: 90px;
-  top: 10px;
+  right: 45%; /* (90px/$toggleWidth*100) */
+  top: 10%; /* (10px/$toggleHeight*100) */
   animation-delay: -4s;
 }
 
@@ -174,25 +194,25 @@
 
   50% {
     transform: rotate(-45deg) translateX(-20px);
-    box-shadow: 5px 0px 6px 1px #FFF;
+    box-shadow: 5px 0px 6px 1px #fff;
   }
 
   100% {
     transform: rotate(-45deg) translateX(-30px);
-    width: 2px;
-    height: 2px;
+    width: 1%;
+    height: 2%;
     opacity: 0;
     box-shadow: none;
   }
 }
 
 #hide-checkbox:checked + .toggle {
-  background: #24D7F7;
+  background: #24d7f7;
 }
 
 #hide-checkbox:checked + .toggle .toggle-button {
-  background: #F7FFFF;
-  transform: translateX(102px);
+  background: #f7ffff;
+  transform: translateX(118%);
   box-shadow: 0 0 35px 5px rgb(255, 255, 255);
 }
 
@@ -207,91 +227,91 @@
 }
 
 #hide-checkbox:checked + .toggle .star-1 {
-  width: 40px;
-  height: 10px;
+  width: 20%;
+  height: 10%;
   border-radius: 10px;
-  background: #FFF;
-  left: 20px;
-  top: 25px;
+  background: #fff;
+  left: 10%;
+  top: 25%;
   box-shadow: none;
 }
 
 #hide-checkbox:checked + .toggle .star-2 {
-  width: 12px;
-  height: 12px;
-  background: #FFF;
-  left: 26px;
-  top: 23px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+  width: 6%;
+  height: 12%;
+  background: #fff;
+  left: 13%;
+  top: 23%;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 #hide-checkbox:checked + .toggle .star-3 {
-  width: 16px;
-  height: 16px;
-  background: #FFF;
-  left: 35px;
-  top: 19px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+  width: 8%;
+  height: 16%;
+  background: #fff;
+  left: 17.5%;
+  top: 19%;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 #hide-checkbox:checked + .toggle .star-4 {
-  width: 14px;
-  height: 14px;
-  background: #FFF;
-  left: 46px;
-  top: 21px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+  width: 7%;
+  height: 14%;
+  background: #fff;
+  left: 23%;
+  top: 21%;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 #hide-checkbox:checked + .toggle .star-5 {
-  width: 60px;
-  height: 15px;
+  width: 30%;
+  height: 15%;
   border-radius: 15px;
-  background: #FFF;
-  left: 30px;
-  bottom: 20px;
+  background: #fff;
+  left: 15%;
+  bottom: 20%;
   box-shadow: none;
 }
 
 #hide-checkbox:checked + .toggle .star-6 {
-  width: 18px;
-  height: 18px;
-  background: #FFF;
+  width: 9%;
+  height: 18%;
+  background: #fff;
   border-radius: 50%;
-  left: 38px;
-  bottom: 20px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+  left: 19%;
+  bottom: 20%;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 #hide-checkbox:checked + .toggle .star-7 {
-  width: 24px;
-  height: 24px;
-  background: #FFF;
+  width: 12%;
+  height: 24%;
+  background: #fff;
   border-radius: 50%;
-  left: 52px;
-  bottom: 20px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+  left: 26%;
+  bottom: 20%;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 #hide-checkbox:checked + .toggle .star-8 {
-  width: 21px;
-  height: 21px;
-  background: #FFF;
+  width: 10.5%;
+  height: 21%;
+  background: #fff;
   border-radius: 50%;
-  left: 70px;
-  top: 59px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+  left: 35%;
+  top: 59%;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 @keyframes move {
   0% {
     transform: none;
   }
-  
+
   25% {
     transform: translateX(2px);
   }
-  
+
   100% {
     transform: translateX(-2px);
   }
