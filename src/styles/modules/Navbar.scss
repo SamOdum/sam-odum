@@ -59,6 +59,10 @@ nav {
     @include md {
       display: block;
     }
+    // 992px window width and more
+    @include lg {
+      margin-top: 16.47597254004577%;
+    }
   }
 
   .mini-logo {
@@ -81,6 +85,14 @@ nav {
     // width: 52.08333333333333%; // max-dimension seem better
     max-width: 80px;
     max-height: 40px;
+    /* 768px window width and more */
+    @include md {
+      margin-top: 10%;
+    }
+    /* 992px window width and more */
+    @include lg {
+      margin-top: 8%;
+    }
   }
 
   ul {
@@ -135,6 +147,8 @@ nav {
         // 992px window width and more
         @include lg {
           width: 62.50930197946123%;
+          padding-top: 6.5%;
+          padding-bottom: 6.5%;
         }
 
         &.active {
@@ -187,6 +201,7 @@ nav {
           // 768px window width and more
           @include md {
             display: inline-block;
+            margin-left: 12%;
           }
         }
       }
