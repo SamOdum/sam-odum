@@ -14,32 +14,32 @@ const Navbar = () => {
       <ul>
         <li>
           <a href="#1">
-            <i className="fa fa-home" />
-            <em>Home</em>
+            <span className="fa fa-home" />
+            <span className="nav-link">Home</span>
           </a>
         </li>
         <li>
           <a href="#2">
-            <i className="fa fa-user" />
-            <em>About</em>
+            <span className="fa fa-user" />
+            <span className="nav-link">About</span>
           </a>
         </li>
         <li>
           <a href="#3">
-            <i className="fa fa-pencil" />
-            <em>Entries</em>
+            <span className="fa fa-pencil" />
+            <span className="nav-link">Entries</span>
           </a>
         </li>
         <li>
           <a href="#4">
-            <i className="fa fa-image" />
-            <em>Work</em>
+            <span className="fa fa-image" />
+            <span className="nav-link">Work</span>
           </a>
         </li>
         <li>
           <a href="#5">
-            <i className="fa fa-envelope" />
-            <em>Contact</em>
+            <span className="fa fa-envelope" />
+            <span className="nav-link">Contact</span>
           </a>
         </li>
       </ul>

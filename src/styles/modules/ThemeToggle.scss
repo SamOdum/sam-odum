@@ -12,14 +12,9 @@ $toggleHeight: 25px; /*Added this for size control*/
 $toggleWidth: 50px; /*Added this for size control*/
 
 .wrapper {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // height: 20%;
-  margin: 25% auto;
+  margin: 0 auto;
   height: $toggleHeight;
   width: $toggleWidth;
-  // transform: translate(-50%, -50%);
 }
 
 #hide-checkbox {
