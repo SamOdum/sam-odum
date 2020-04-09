@@ -20,6 +20,7 @@
   }
 
   &-text {
+    display: none;
     width: 100%;
     padding: 5% 8%;
     /* 576 window width and more*/
@@ -44,6 +45,24 @@
       font-size: 120%;
       padding: 0 8%;
     }
+  }
+}
+
+.test {
+  display: none;
+  width: 100%;
+  padding: 5% 8%;
+  /* 576 window width and more*/
+  @include sm {
+    width: 50%;
+    padding-right: 4%;
+    padding-left: 4%;
+    order: 0;
+  }
+
+  p:nth-child(2) {
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 }
 
