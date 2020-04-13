@@ -20,6 +20,7 @@ const Home = () => {
           </p>
         </div>
         <div className="test" style={display.about}>
+          <h1>About me</h1>
           <p>
             I am a fullstack developer thoroughly grounded in the basic frontend
             trio, as well as react. I mostly use Node.js, Python, Express, and
