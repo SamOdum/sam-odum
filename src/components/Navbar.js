@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import HomeContext from '../contexts/HomeContext';
 
 const Navbar = () => {
-  const [display, setDisplay] = useContext(HomeContext);
+  /* I'm passing over 'display' with a comma because 
+  I'm only using the context's 'setDisplay' method */
+  const [, setDisplay] = useContext(HomeContext);
   const handleAbout = () => {
     setDisplay({
       home: { display: 'none' },
@@ -27,34 +30,34 @@ const Navbar = () => {
       <ThemeToggle />
       <ul>
         <li>
-          <a href="#1" onClick={handleHome}>
+          <NavLink className="anchor-link" to="/home" onClick={handleHome}>
             <span className="fa fa-home" />
             <span className="nav-link">Home</span>
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#2" onClick={handleAbout}>
+          <NavLink className="anchor-link" to="/about" onClick={handleAbout}>
             <span className="fa fa-user" />
             <span className="nav-link">About</span>
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#4">
+          <NavLink className="anchor-link" to="/work">
             <span className="fa fa-image" />
             <span className="nav-link">Work</span>
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#3">
+          <NavLink className="anchor-link" to="/blog">
             <span className="fa fa-pencil" />
             <span className="nav-link">Blog</span>
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#5">
+          <NavLink className="anchor-link" to="/contact">
             <span className="fa fa-envelope" />
             <span className="nav-link">Contact</span>
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
