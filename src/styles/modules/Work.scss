@@ -1,0 +1,70 @@
+.work {
+  padding: 5px;
+  display: grid;
+}
+
+.work .item {
+  //   width: 200px;
+  margin: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.work .item img {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.work .item .thumb {
+  position: relative;
+}
+
+.work .item .hover-effect {
+  text-align: left;
+  position: absolute;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.95);
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s;
+}
+
+.work .item:hover .hover-effect {
+  opacity: 1;
+  visibility: visible;
+}
+
+.work .item .hover-effect .hover-content {
+  transform: translateY(-50%);
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  padding: 30px;
+}
+
+.work .item .hover-effect h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.work .item .hover-effect p {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 22px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}

@@ -4,17 +4,20 @@ import '../styles/App.scss';
 import Navbar from './Navbar';
 import Slides from './Slides';
 import { HomeProvider } from '../contexts/HomeContext';
+import { PortfolioProvider } from '../contexts/PortfolioContext';
 
 function App() {
   return (
     <Router>
       <HomeProvider>
-        <div className="App">
-          <Navbar />
-          <Switch>
-            <Slides />
-          </Switch>
-        </div>
+        <PortfolioProvider>
+          <div className="App">
+            <Navbar />
+            <Switch>
+              <Slides />
+            </Switch>
+          </div>
+        </PortfolioProvider>
       </HomeProvider>
     </Router>
   );

@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const HomeContext = createContext();
 
@@ -13,6 +14,10 @@ export const HomeProvider = ({ children }) => {
       {children}
     </HomeContext.Provider>
   );
+};
+
+HomeProvider.propTypes = {
+  children: PropTypes.string.isRequired,
 };
 
 export default HomeContext;
