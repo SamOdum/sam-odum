@@ -1,0 +1,109 @@
+.contact {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* 576 window width and more*/
+  @include sm {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-image {
+    width: 100%;
+    /* 576 window width and more*/
+    @include sm {
+      width: 50%;
+      order: 2;
+    }
+  }
+
+  &-text {
+    width: 100%;
+    padding: 5% 8%;
+    /* 576 window width and more*/
+    @include sm {
+      width: 50%;
+      padding-right: 4%;
+      padding-left: 4%;
+      order: 0;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+
+      &-btn,
+      &-field {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        margin: 2% 0;
+      }
+
+      &-btn {
+        border: 2px solid #fff;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #fff;
+        text-decoration: none;
+        background-color: transparent;
+        border-radius: 0px;
+        transition: all 0.5s;
+        &:hover {
+          color: #232323;
+          background-color: #fff;
+        }
+      }
+      &-field {
+        padding-left: 2%;
+      }
+    }
+  }
+  &__social {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-icon-container {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & a {
+        display: block;
+        text-align: center;
+        margin: 24.469px 5px;
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+        border-radius: 20px;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+        background-color: transparent;
+        color: #fff;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: 0;
+          z-index: -1;
+          border-radius: 20px;
+          background: #0ff;
+          transition: all 0.2s ease;
+          transform: scale(0);
+        }
+        &:hover:after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
