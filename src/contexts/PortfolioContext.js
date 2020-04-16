@@ -28,6 +28,48 @@ export const PortfolioProvider = ({ children }) => {
       imageBig,
       imageSmall,
     },
+    {
+      key: '04',
+      name: 'Best First',
+      description: "the first one I'm testing",
+      imageBig,
+      imageSmall,
+    },
+    {
+      key: '05',
+      name: 'Another One',
+      description: "the wonderful one I'm testing",
+      imageBig,
+      imageSmall,
+    },
+    {
+      key: '06',
+      name: 'Still Another',
+      description: 'to check and be doubly sure',
+      imageBig,
+      imageSmall,
+    },
+    {
+      key: '07',
+      name: 'Best First',
+      description: "the first one I'm testing",
+      imageBig,
+      imageSmall,
+    },
+    {
+      key: '08',
+      name: 'Another One',
+      description: "the wonderful one I'm testing",
+      imageBig,
+      imageSmall,
+    },
+    {
+      key: '09',
+      name: 'Still Another',
+      description: 'to check and be doubly sure',
+      imageBig,
+      imageSmall,
+    },
   ]);
 
   return (

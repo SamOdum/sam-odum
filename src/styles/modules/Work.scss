@@ -1,12 +1,19 @@
 .work {
-  padding: 5px;
+  padding: 1%;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(9, auto);
+  // justify-content: center;
+  // align-items: center;
+  gap: 1%;
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 30%);
+  }
 }
 
 .work .item {
-  //   width: 200px;
   margin: 10px;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .work .item img {

@@ -3,6 +3,7 @@ import PortfolioPiece from './PortfolioPiece';
 import PortfolioContext from '../contexts/PortfolioContext';
 
 const Work = () => {
+  /* Using a comma to gloss over 'setPortfolio'  */
   const [portfolio, ,] = useContext(PortfolioContext);
 
   return (
