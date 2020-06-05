@@ -3,13 +3,22 @@ import PropTypes from 'prop-types';
 
 const ThemeContext = createContext();
 
-const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState({});
-  return <ThemeContext.Provider>{children}</ThemeContext.Provider>;
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState({
+    light: true,
+    lightTheme: { color: 'white' },
+    darkTheme: { backgroundColor: 'white', color: 'red' },
+  });
+
+  return (
+    <ThemeContext.Provider value={[theme, setTheme]}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };
 
 ThemeProvider.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
 };
 
 export default ThemeContext;

@@ -5,18 +5,21 @@ import Navbar from './Navbar';
 import Slides from './Slides';
 import { HomeProvider } from '../contexts/HomeContext';
 import { PortfolioProvider } from '../contexts/PortfolioContext';
+import { ThemeProvider } from '../contexts/ThemeContext';
 
 function App() {
   return (
     <Router>
       <HomeProvider>
         <PortfolioProvider>
-          <div className="App">
-            <Navbar />
-            <Switch>
-              <Slides />
-            </Switch>
-          </div>
+          <ThemeProvider>
+            <div className="App">
+              <Navbar />
+              <Switch>
+                <Slides />
+              </Switch>
+            </div>
+          </ThemeProvider>
         </PortfolioProvider>
       </HomeProvider>
     </Router>

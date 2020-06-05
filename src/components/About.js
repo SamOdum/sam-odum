@@ -1,16 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import profilePix from '../imgs/sam-odum.jpg';
-import HomeContext from '../contexts/HomeContext';
 
 const About = () => {
-  const [display] = useContext(HomeContext);
   return (
     <div className="slide" id="2">
       <div className="content profile">
         <div className="profile-image">
           <img src={profilePix} alt="Sam Odum" />
         </div>
-        <div className="test" style={display.about}>
+        <div className="test">
           <h1>About me</h1>
           <p>
             I am a fullstack developer thoroughly grounded in the basic frontend

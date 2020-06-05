@@ -11,7 +11,7 @@ const Work = () => {
       <div className="content work">
         {portfolio.map((item) => (
           <PortfolioPiece
-            key={item.key}
+            key={item.id}
             name={item.name}
             description={item.description}
             imageBig={item.imageBig}

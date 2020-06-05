@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PorfolioPiece = ({ name, description, imageBig, imageSmall, key }) => {
+const PorfolioPiece = ({ name, description, imageBig, imageSmall }) => {
   return (
-    <div className="item" key={key}>
+    <div className="item">
       <div className="thumb">
         <a href={imageBig} data-lightbox="image-1">
           <div className="hover-effect">
@@ -26,7 +26,6 @@ PorfolioPiece.propTypes = {
   description: PropTypes.string.isRequired,
   imageBig: PropTypes.string.isRequired,
   imageSmall: PropTypes.string.isRequired,
-  key: PropTypes.string.isRequired,
 };
 
 export default PorfolioPiece;

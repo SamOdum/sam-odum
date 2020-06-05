@@ -1,9 +1,17 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useContext } from 'react';
+import ThemeContext from '../contexts/ThemeContext';
 
 const ThemeToggle = () => {
+  const [theme, setTheme] = useContext(ThemeContext);
+
+  const handleClick = () => {
+    setTheme({ ...theme, light: !theme.light });
+  };
+
   return (
     <div className="wrapper">
-      <input type="checkbox" id="hide-checkbox" />
+      <input type="checkbox" id="hide-checkbox" onClick={handleClick} />
       <label htmlFor="hide-checkbox" className="toggle">
         <span className="toggle-button">
           <span className="crater crater-1" />

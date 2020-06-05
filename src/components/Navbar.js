@@ -1,26 +1,15 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
-import HomeContext from '../contexts/HomeContext';
+import ThemeContext from '../contexts/ThemeContext';
 
 const Navbar = () => {
-  /* I'm passing over 'display' with a comma because 
-  I'm only using the context's 'setDisplay' method */
-  const [, setDisplay] = useContext(HomeContext);
-  const handleAbout = () => {
-    setDisplay({
-      home: { display: 'none' },
-      about: { display: 'block' },
-    });
-  };
-  const handleHome = () => {
-    setDisplay({
-      home: { display: 'block' },
-      about: { display: 'none' },
-    });
-  };
+  const [theme] = useContext(ThemeContext);
+  const { light, lightTheme, darkTheme } = theme;
+  const scheme = light ? lightTheme : darkTheme;
+
   return (
-    <nav>
+    <nav style={scheme}>
       <div className="logo">
         <h1>Sam Odum</h1>
       </div>
@@ -30,13 +19,13 @@ const Navbar = () => {
       <ThemeToggle />
       <ul>
         <li>
-          <NavLink className="anchor-link" to="/home" onClick={handleHome}>
+          <NavLink className="anchor-link" to="/home" style={scheme}>
             <span className="fa fa-home" />
             <span className="nav-link">Home</span>
           </NavLink>
         </li>
         <li>
-          <NavLink className="anchor-link" to="/about" onClick={handleAbout}>
+          <NavLink className="anchor-link" to="/about">
             <span className="fa fa-user" />
             <span className="nav-link">About</span>
           </NavLink>

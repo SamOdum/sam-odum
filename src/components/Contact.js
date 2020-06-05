@@ -62,7 +62,7 @@ const Contact = () => {
             <button
               className="contact-text__form-btn"
               id="form-submit"
-              Name="btn"
+              name="btn"
               type="submit"
             >
               Send Now
