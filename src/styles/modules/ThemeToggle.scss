@@ -31,7 +31,7 @@ $toggleWidth: 50px; /*Added this for size control*/
   height: 100%; /* 100px */
   background: #211042;
   border-radius: 50px;
-  border: 2px solid #fff;
+  border: 2px solid #000;
   transition: 500ms;
   overflow: hidden;
 }
@@ -203,6 +203,7 @@ $toggleWidth: 50px; /*Added this for size control*/
 
 #hide-checkbox:checked + .toggle {
   background: #24d7f7;
+  border: 2px solid #fff;
 }
 
 #hide-checkbox:checked + .toggle .toggle-button {

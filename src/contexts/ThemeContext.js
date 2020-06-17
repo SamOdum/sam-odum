@@ -6,8 +6,16 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState({
     light: true,
-    lightTheme: { color: 'white' },
-    darkTheme: { backgroundColor: 'white', color: 'red' },
+    lightTheme: {
+      foreGround: '#282c34',
+      bckGround: '#fff',
+      color: `#000`,
+    },
+    darkTheme: {
+      foreGround: '#282c34',
+      bckGround: `rgba(0, 0, 0, 0.5)`,
+      color: '#fff',
+    },
   });
 
   return (
@@ -18,7 +26,10 @@ export const ThemeProvider = ({ children }) => {
 };
 
 ThemeProvider.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default ThemeContext;

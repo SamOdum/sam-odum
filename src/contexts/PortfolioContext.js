@@ -81,7 +81,10 @@ export const PortfolioProvider = ({ children }) => {
 };
 
 PortfolioProvider.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default PortfolioContext;

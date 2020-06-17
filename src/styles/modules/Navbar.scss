@@ -41,6 +41,8 @@ nav {
   width: 15vh;
   font-weight: 300;
   font-size: 1rem;
+  transition: color 2s, background-color 1s;
+
   // 576px window width and more
   @include rwd(550) {
     width: 20%;
